@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+/*
+
+font-family: 'Nunito', sans-serif;
+font-family: 'Bitter', serif;
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: rgb(245, 244, 244);
+}
+
+/*..........COLLAPSE NAV..........*/
+
+.collapse-nav{
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+.collapse-nav-drop{
+    height: 0px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s;
+}
+
+/*................................*/
+
+
+/*........................ LANDING - PAGE ................................*/
+
+.main-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/landing-backgrounds/back-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    animation: background-change 10s infinite;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes background-change{
+    0%, 100%{
+        background-image: url('../images/landing-backgrounds/back-1.jpg');
+    }
+    20%{
+        background-image: url('../images/landing-backgrounds/back-2.jpg');
+    }
+    40%{
+        background-image: url('../images/landing-backgrounds/back-3.jpg');
+    }
+    60%{
+        background-image: url('../images/landing-backgrounds/back-4.jpg');
+    }
+    80%{
+        background-image: url('../images/landing-backgrounds/back-5.jpg');
+    }
+}
+
+.back-gradient{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(65deg, rgba(255, 166, 0, 0.4), rgba(255, 140, 0, 0.4), rgba(255, 68, 0, 0.4));
+}
+
+.cover-wave{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url('../images/Blank_Blob-01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*...........NAVIGATION BAR..........*/
+.nav-menu2{
+    display: none !important;
+    z-index: 555;
+    background-color: #fff;
+}
+.nav-menu2.scrolling{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 6px 2px 0px rgba(0,0,0,0.19);
+}
+.nav-menu2 .right-nav a{ 
+    color: rgb(141, 141, 141); 
+    border: 2px solid rgba(141, 141, 141, 0.349); 
+}
+.nav-menu2 .right-nav a:hover{ color: orange;}
+
+
+.nav-menu{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+.left-nav, .right-nav{
+    font-family: 'Nunito', sans-serif;
+}
+.left-nav{
+    display: flex;
+    align-items: center;
+}
+.left-nav a{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(141, 141, 141);
+    transition: ease-in-out 0.4s;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 2px #fff;
+}
+.left-nav a:hover{
+    color: rgb(109, 109, 109);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.315);
+}
+.left-nav a span{
+    width: 77.3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+
+.right-nav a{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.4s;
+    text-decoration: none;
+    font-size: 16px;
+}
+.login:hover{
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 8px 0px rgba(0,0,0,0.19);
+}
+.sign-up:hover{
+    background-color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
+    color: darkorange;
+    border: 2px solid darkorange;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 8px 0px rgba(0,0,0,0.19);
+}
+
+/*...................................*/
+
+
+
+
+/*..........HEADING PORTION..........*/
+
+
+.heading-portion{
+    width: 465px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translate(0%, -50%);
+}
+.heading-portion h1{
+    font-size: 80px;
+    font-family: 'Bitter', serif;
+    color: rgb(124, 124, 124);
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 3px #fff;
+}
+.heading-portion p{
+    margin-left: 10px;
+    color: rgb(124, 124, 124);
+    text-shadow: 3px 3px 3px #fff;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.heading-button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: 'Nunito', sans-serif;
+    background-color: darkorange;
+    color: white;
+    text-decoration: none !important;
+    border-radius: 20px 20px;
+    transition: all linear 1s;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 8px 0px rgba(0,0,0,0.19);
+}
+.heading-button:hover{
+    background-image: linear-gradient(65deg, orange, darkorange, orangered);
+    color: #fff;
+}
+.heading-button .plane-icon{
+    font-size: 0px;
+    transition: all linear 0.4s;
+}
+.heading-button:hover>.plane-icon{
+    font-size: 20px;
+}
+/*...............................*/
+
+
+
+/*....................RESPONSIVE NAV BAR......................*/
+
+@media only screen and (max-width: 780px){
+    .nav-menu{
+        display: none;
+    }
+
+    .collapse-nav{
+        display: block;
+    }
+    .collapse-nav .menubar{
+        margin: 0 auto;
+        width: 150px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse-nav .menubar .bar-box{
+        width: 60px;
+        height: 40px;
+        position: relative;
+    }
+    .bar-box:hover{
+        cursor: pointer;
+    }
+    .collapse-bars{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.568);
+        border-radius: 30px 30px;
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s;
+    }
+    .bar-box .bar1{
+        width: 12px; /* 20% of 60 */
+        top: 10px;
+    }
+    .bar-box .bar2{
+        width: 42px; /* 70% of 60 */
+        top: 50%;
+    }
+    .bar-box .bar3{
+        width: 30px; /* 50% of 60 */
+        bottom: 10px;
+    }
+
+    .bar1.active{
+        width: 26px;
+        top: 50%;
+        left: 25%;
+        transform: rotate(225deg);
+    }
+    .bar2.active{
+        width: 26px;
+        top: 50%;
+        left: 25%;
+        opacity: 0;
+    }
+    .bar3.active{
+        width: 26px;
+        top: 50%;
+        left: 25%;
+        transform: rotate(-225deg);
+    }
+
+
+
+
+    .collapse-nav-drop.active{
+        display: block;
+        position: fixed;
+        top: 60px;
+        width: 100vw;
+        z-index: 2;
+        height: calc(100vh - 60px);
+    }
+    .clipped-back{
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(42.2% at 99% 0);
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s;
+        background-image: linear-gradient(65deg, rgba(255, 166, 0, 0.7), rgba(255, 140, 0, 0.7), rgba(255, 115, 0, 0.7));
+    }
+    .clipped-back:hover{
+        clip-path: circle(107.7% at 91% 0);
+    }
+    .collapse-nav-back-img{
+        position: absolute;
+        z-index: 1;
+        bottom: -20%;
+        right: -30%;
+    }
+    .collapse-link-box{
+        width: 300px;
+        height: 60%;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .collapse-link{
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.781);
+        text-decoration: none !important;
+        font-family: 'Bitter', serif;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;
+    }
+    .collapse-link:hover{
+        color: #fff;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.308);
+    }
+
+}
+
+/*..............................................................*/
+
+
+/*....................RESPONSIVE LAND PAGE......................*/
+
+@media only screen and (max-width: 560px){  /* tab version */
+
+    .back-gradient{
+        background-image: linear-gradient(65deg, rgba(128, 83, 0, 0.4), rgba(138, 76, 0, 0.4), rgba(138, 37, 0, 0.4));
+    }
+
+    .heading-portion{
+        width: 90vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .heading-portion h1{
+        color: rgb(255, 255, 255);
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 70px;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.342);
+    }
+    .heading-portion p{
+        display: none;
+    }
+    .heading-button{
+        margin-left: 10px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 8px 0px rgba(0,0,0,0.19);
+    }
+
+}
+
+
+
+@media only screen and (max-width: 560px){   /* mobile version */
+    .heading-portion h1{
+        font-size: 50px;
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) and (orientation: portrait){
+    .main-page{
+        background-image: url('../images/landing-backgrounds/android-back-1.jpg');
+    }
+    @keyframes background-change{
+        0%, 100%{
+            background-image: url('../images/landing-backgrounds/android-back-1.jpg');
+        }
+        20%{
+            background-image: url('../images/landing-backgrounds/android-back-2.jpg');
+        }
+        40%{
+            background-image: url('../images/landing-backgrounds/android-back-3.jpg');
+        }
+        60%{
+            background-image: url('../images/landing-backgrounds/android-back-4.jpg');
+        }
+        80%{
+            background-image: url('../images/landing-backgrounds/android-back-5.jpg');
+        }
+    }
+}
+
+
+/*............................................................................................*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*...............BOARDING.............*/
+
+
+.onboarding{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 40px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}
+.onboarding h1{
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    font-family: 'nunito';
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #616161;
+}
+.onboarding h1::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.514);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.onboard-slider{
+    width: calc(100vw * 7);
+    height: 80vh;
+    overflow: hidden;
+    transition: all cubic-bezier(0.03, 0.91, 0.42, 1.35) 0.6s
+}
+.onboard-slider.slide2{
+    transform: translateX(-100vw);
+}
+.onboard-slider.slide3{
+    transform: translateX(-200vw);
+}
+.onboard-slider.slide4{
+    transform: translateX(-300vw);
+}
+.onboard-slider.slide5{
+    transform: translateX(-400vw);
+}
+.onboard-slider.slide6{
+    transform: translateX(-500vw);
+}
+.onboard-card-shell{
+    display: inline-block !important;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(15%);
+}
+.onboard-card{
+    width: 70%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 6px 12px 0px rgba(0,0,0,0.19);
+    border-radius: 50px;
+}
+.onboard-card img{
+    width: 80%;
+}
+.slider-bubble-box{
+    width: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-100%, -50%);
+}
+.slider-bubble-box .bubbles{
+    width: 15px;
+    height: 15px;
+    margin: 10px auto 20px auto;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.589);
+    transition: all cubic-bezier(0.03, 0.91, 0.42, 1.35) 0.4s;
+}
+.bubbles:hover{
+    cursor: pointer;
+    background-color: orange !important;
+    width: 20px;
+    height: 20px;
+}
+.bubble1.color-bubble{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+}
+.bubble2.color-bubble{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+}
+.bubble3.color-bubble{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+}
+.bubble4.color-bubble{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+}
+.bubble5.color-bubble{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+}
+.bubble6.color-bubble{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+}
+
+
+/*....................................*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.................ROTATING BANNERS..................*/
+
+.rotate-banner-section{
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+}
+.rotate-banner-row{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.rotate-banner-left{
+    background-image: url('../images/rotate-banner-img/3299989.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 0px;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0px 30px 30px 0px;
+    animation: rotate-banner 10s infinite;
+}
+@keyframes rotate-banner{
+    0%, 100%{
+        background-image: url('../images/rotate-banner-img/3299989.jpg');
+    }
+    50%{
+        background-image: url('../images/rotate-banner-img/4560.jpg');
+    }
+}
+.rotate-banner-inner{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+.rotating-boxes{
+    background-color: #fff;
+    position: absolute;
+}
+.rotating-box1{
+    width: 150px;
+    height: 150px;
+    bottom: 0;
+    right: 0;
+    animation: box-rotate-right 4s infinite;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+}
+.rotating-box2{
+    width: 75px;
+    height: 75px;
+    top: 0;
+    right: 0;
+    animation: box-rotate-right 4s infinite;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+}
+.rotating-box3{
+    width: 75px;
+    height: 75px;
+    top: 75px;
+    right: 75px;
+    animation: box-rotate-left 4s infinite;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+}
+@keyframes box-rotate-left{
+    0%, 100%, 10%, 90%{
+        transform: rotateZ(0deg);
+        opacity: 1;
+        box-shadow: none;
+    }
+    25%, 75%{
+        opacity: 0.9;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 8px 12px 0px rgba(0,0,0,0.19);
+    }
+    40%, 50%, 60%{
+        transform: rotateZ(180deg);
+        opacity: 1;
+        box-shadow: none;
+    }
+}
+@keyframes box-rotate-right{
+    0%, 100%, 10%, 90%{
+        transform: rotateZ(0deg);
+        opacity: 1;
+        box-shadow: none;
+    }
+    25%, 75%{
+        opacity: 0.9;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 8px 12px 0px rgba(0,0,0,0.19);
+    }
+    40%, 50%, 60%{
+        transform: rotateZ(-180deg);
+        opacity: 1;
+        box-shadow: none;
+    }
+}
+
+
+.rotate-banner-right{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+.rotate-banner-right h1{
+    font-size: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    color: rgba(0, 0, 0, 0.841);
+}
+.rotate-banner-right h1::after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.841);
+}
+.rotate-banner-right p{
+    font-size: 1.2rem;
+    line-height: 3rem;
+    padding: 0px 30px;
+    color: rgb(100, 100, 100);
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+
+/*.................... RESPONSIVE ROTATE BANNER.................*/
+
+@media only screen and (max-width: 860px) and (orientation: portrait){
+    .rotate-banner-section{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .rotate-banner-row{
+        flex-direction: column;
+        align-items: space-between;
+        justify-content: center;
+    }
+    .rotate-banner-left{
+        width: 100%;
+        height: 30%;
+    }
+    .rotate-banner-inner{
+        width: 150px;
+        height: 150px;
+    }
+    .rotating-box1{
+        width: 75px;
+        height: 75px;
+    }
+    .rotating-box2{
+        width: 37.5px;
+        height: 37.5px;
+    }
+    .rotating-box3{
+        width: 37.5px;
+        height: 37.5px;
+        top: 37.5px;
+        right: 37.5px;
+    }
+
+    .rotate-banner-right{
+        width: 100%;
+        height: 70%;
+    }
+    .rotate-banner-right h1{
+        font-size: 40px;
+    }
+    .rotate-banner-right p{
+        line-height: 2.7rem;
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) and (orientation: portrait){
+    .rotate-banner-left{
+        background-image: url('../images/rotate-banner-img/android-3299989.jpg');
+        animation: rotate-banner-android 10s infinite;
+    }
+    @keyframes rotate-banner-android{
+        0%, 100%{
+            background-image: url('../images/rotate-banner-img/android-3299989.jpg');
+        }
+        50%{
+            background-image: url('../images/rotate-banner-img/android-4560.jpg');
+        }
+    }
+}
+
+
+
+
+/*..............................................................*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*...............................YOU ARE AT THE RIGHT PLACE...............................*/
+
+.right-place-banner{
+    width: 100vw;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    background-image: url('../images/At_the_right_place/color-smoke-red.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.right-place-banner h1{
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding: 50px 0px;
+    position: relative;
+    color: rgba(0, 0, 0, 0.75);
+    text-shadow: 3px 3px 3px #fff;
+}
+.right-place-banner h1::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.841);
+    box-shadow: 0px 4px 8px 0px #fff;
+}
+.right-place-banner p{
+    margin-top: 50px;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.841);
+    text-align: center;
+    margin: 20px auto;
+    text-shadow: 3px 3px 3px #fff;
+}
+.right-place-skill-row{
+    width: 80%;
+    margin: 0 auto;
+    padding: 80px 50px 30px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.right-place-skillcard{
+    width: 20%;
+    padding: 50px 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px 0px rgba(255, 140, 0, 0.2), 0px 6px 12px 0px rgba(255, 140, 0, 0.19);
+}
+.right-place-skillcard:hover{
+    cursor: pointer;
+}
+.right-place-skillcard i{
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: darkorange;
+    transition: ease-in-out 0.4s;
+}
+.right-place-skillcard h4{
+    color: rgb(97, 97, 97);
+}
+.right-place-skillcard p{
+    font-size: 18px;
+    color: rgb(97, 97, 97);
+}
+.right-place-skillcard:hover>.fa{
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+/*..................RESPONSIVE...................*/
+
+@media only screen and (max-width: 1035px){
+
+    .right-place-skill-row{
+        width: 100%;
+        padding: 80px 20px 30px 20px;
+    }
+    .right-place-skillcard{
+        width: 30%;
+        padding: 50px 20px;
+    }
+}
+
+@media only screen and (max-width: 560px){
+
+    .right-place-banner h1{
+        font-size: 30px;
+        padding: 30px 0px;
+    }
+    .right-place-banner p{
+        font-size: 28px;
+        margin: 5px auto;
+    }
+    .right-place-skill-row{
+        display: block;
+    }
+    .right-place-skillcard{
+        width: 80%;
+        padding: 50px 20px;
+        margin: 20px auto;
+    }
+    .right-place-skillcard h4{
+        font-size: 30px;
+    }
+    .right-place-skillcard p{
+        font-size: 18px;
+    }
+}
