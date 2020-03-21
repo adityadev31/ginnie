@@ -223,11 +223,11 @@ body, html{
     background-image: linear-gradient(65deg, orange, darkorange, orangered);
     color: #fff;
 }
-.heading-button .plane-icon{
+.heading-button .fa-angle-down{
     font-size: 0px;
     transition: all linear 0.4s;
 }
-.heading-button:hover>.plane-icon{
+.heading-button:hover>.fa-angle-down{
     font-size: 20px;
 }
 /*...............................*/
