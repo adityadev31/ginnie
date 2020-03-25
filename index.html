@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/17c67bee6e.js" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- AOS -->
@@ -53,7 +54,7 @@
   <!-------------------------------------------------------------->
 
 
-  <div class="nav-menu nav-menu2">
+  <div class="nav-menu nav-menu2 d-none">
     <div class="left-nav">
       <a href="#"><span><img src="images/GenieGig-01-01.png" style="width: 60px;" alt=""></span></a>
       <a href="#about">ABOUT</a>
@@ -87,7 +88,7 @@
         <div class="heading-portion">
           <h1>Welcome to GinnieGig</h1>
           <p>A place for everything, for everyone !!</p>
-          <a class="heading-button" href="#">How it works <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          <a class="heading-button" href="#onboard">How it works <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -103,16 +104,13 @@
 
   <!----------------- ONBOARDING ------------------->
 
-  <section class="onboarding">
-    <h1 class="text-center" data-aos="fade-up" data-aos-duration="1000">What is GinieGig?</h1>
-    <div class="onboard-slider">
-      <div class="onboard-card-shell"><div class="onboard-card" data-aos="fade-up-left" data-aos-duration="1000"><img src="images/onboarding/High Res/Onboarding-01.png" ></div></div>
-      <div class="onboard-card-shell"><div class="onboard-card"><img src="images/onboarding/High Res/Onboarding-02.png" ></div></div>
-      <div class="onboard-card-shell"><div class="onboard-card"><img src="images/onboarding/High Res/Onboarding-03.png" ></div></div>
-      <div class="onboard-card-shell"><div class="onboard-card"><img src="images/onboarding/High Res/Onboarding-04.png" ></div></div>
-      <div class="onboard-card-shell"><div class="onboard-card"><img src="images/onboarding/High Res/Onboarding-05.png" ></div></div>
-      <div class="onboard-card-shell"><div class="onboard-card"><img src="images/onboarding/High Res/Onboarding-06.png" ></div></div>
-    </div>
+  <section class="onboarding" id="onboard">
+    <div class="onboard-card2 onboard-c1 shadow p-3 mb-5 bg-white rounded" style="z-index: 10;"><img src="images/onboarding/High Res/Onboarding-01.png" ></div>
+    <div class="onboard-card2 onboard-c2 shadow p-3 mb-5 bg-white rounded" style="z-index: 9;"><img src="images/onboarding/High Res/Onboarding-02.png" ></div>
+    <div class="onboard-card2 onboard-c3 shadow p-3 mb-5 bg-white rounded" style="z-index: 8;"><img src="images/onboarding/High Res/Onboarding-03.png" ></div>
+    <div class="onboard-card2 onboard-c4 shadow p-3 mb-5 bg-white rounded" style="z-index: 7;"><img src="images/onboarding/High Res/Onboarding-04.png" ></div>
+    <div class="onboard-card2 onboard-c5 shadow p-3 mb-5 bg-white rounded" style="z-index: 6;"><img src="images/onboarding/High Res/Onboarding-05.png" ></div>
+    <div class="onboard-card2 onboard-c6 peek shadow p-3 mb-5 bg-white rounded" style="z-index: 5;"><img src="images/onboarding/High Res/Onboarding-06.png" ></div>
     <div class="slider-bubble-box">
       <div class="bubbles bubble1 color-bubble"></div>
       <div class="bubbles bubble2"></div>
@@ -124,6 +122,36 @@
   </section>
 
 
+
+
+
+
+
+
+
+
+
+  <!------------------- SERVICES ---------------------->
+
+
+  <section class="checkout-services">
+    <h4>Check out our services</h4>
+    <div class="checkout-box">
+      <div class="row p-3 checkout-row">
+        <div class="col-md-3 col-12"><a href="#"><i class="ico1 fas fa-palette"></i></a><p>Graphics Designing</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico2 fab fa-twitter"></i></a><p>Social Media</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico3 fa fa-file-code-o"></i></a><p>Programming</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico4 fa fa-pencil-square-o"></i></a><p>Content-Writing</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico5 fas fa-headphones"></i></a><p>Audio & Music</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico6 fab fa-pied-piper-hat"></i></a><p>Lifestyle</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico7 fas fa-video"></i></a><p>Video & Animation</p></div>
+        <div class="col-md-3 col-12"><a href="#"><i class="ico8 far fa-handshake"></i></a><p>Business Marketing</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--------------------------------------------------->
 
 
 
@@ -194,6 +222,11 @@
 
   <script>
     $(document).ready(function(){
+
+      $(window).scroll(function(){
+        $('.nav-menu2').addClass('scrolling');
+      });
+
       $('.bar-box').click(function(){
         $('.bar1').toggleClass('active');
         $('.bar2').toggleClass('active');
@@ -206,83 +239,64 @@
         $('.bar3').toggleClass('active');
         $('.collapse-nav-drop').toggleClass('active');
       });
-      $('.bubble1').click(function(){
-        $('.bubble1').addClass('color-bubble')
-        $('.bubble2').removeClass('color-bubble')
-        $('.bubble3').removeClass('color-bubble')
-        $('.bubble4').removeClass('color-bubble')
-        $('.bubble5').removeClass('color-bubble')
-        $('.bubble6').removeClass('color-bubble')
-        $('.onboard-slider').removeClass('slide2');
-        $('.onboard-slider').removeClass('slide3');
-        $('.onboard-slider').removeClass('slide4');
-        $('.onboard-slider').removeClass('slide5');
-        $('.onboard-slider').removeClass('slide6');
-      });
-      $('.bubble2').click(function(){
+
+      $('.onboard-c1').click(function(){
+        $('.onboard-c1').toggleClass('rotate');
         $('.bubble2').addClass('color-bubble')
         $('.bubble1').removeClass('color-bubble')
         $('.bubble3').removeClass('color-bubble')
         $('.bubble4').removeClass('color-bubble')
         $('.bubble5').removeClass('color-bubble')
         $('.bubble6').removeClass('color-bubble')
-        $('.onboard-slider').addClass('slide2');
-        $('.onboard-slider').removeClass('slide3');
-        $('.onboard-slider').removeClass('slide4');
-        $('.onboard-slider').removeClass('slide5');
-        $('.onboard-slider').removeClass('slide6');
       });
-      $('.bubble3').click(function(){
+      $('.onboard-c2').click(function(){
+        $('.onboard-c2').toggleClass('rotate');
         $('.bubble3').addClass('color-bubble')
         $('.bubble1').removeClass('color-bubble')
         $('.bubble2').removeClass('color-bubble')
         $('.bubble4').removeClass('color-bubble')
         $('.bubble5').removeClass('color-bubble')
         $('.bubble6').removeClass('color-bubble')
-        $('.onboard-slider').addClass('slide3');
-        $('.onboard-slider').removeClass('slide2');
-        $('.onboard-slider').removeClass('slide4');
-        $('.onboard-slider').removeClass('slide5');
-        $('.onboard-slider').removeClass('slide6');
       });
-      $('.bubble4').click(function(){
+      $('.onboard-c3').click(function(){
+        $('.onboard-c3').toggleClass('rotate');
         $('.bubble4').addClass('color-bubble')
         $('.bubble1').removeClass('color-bubble')
         $('.bubble2').removeClass('color-bubble')
         $('.bubble3').removeClass('color-bubble')
         $('.bubble5').removeClass('color-bubble')
         $('.bubble6').removeClass('color-bubble')
-        $('.onboard-slider').toggleClass('slide4');
-        $('.onboard-slider').removeClass('slide2');
-        $('.onboard-slider').removeClass('slide3');
-        $('.onboard-slider').removeClass('slide5');
-        $('.onboard-slider').removeClass('slide6');
       });
-      $('.bubble5').click(function(){
+      $('.onboard-c4').click(function(){
+        $('.onboard-c4').toggleClass('rotate');
         $('.bubble5').addClass('color-bubble')
         $('.bubble1').removeClass('color-bubble')
         $('.bubble2').removeClass('color-bubble')
         $('.bubble3').removeClass('color-bubble')
         $('.bubble4').removeClass('color-bubble')
         $('.bubble6').removeClass('color-bubble')
-        $('.onboard-slider').toggleClass('slide5');
-        $('.onboard-slider').removeClass('slide2');
-        $('.onboard-slider').removeClass('slide3');
-        $('.onboard-slider').removeClass('slide4');
-        $('.onboard-slider').removeClass('slide6');
       });
-      $('.bubble6').click(function(){
+      $('.onboard-c5').click(function(){
+        $('.onboard-c5').toggleClass('rotate');
         $('.bubble6').addClass('color-bubble')
         $('.bubble1').removeClass('color-bubble')
         $('.bubble2').removeClass('color-bubble')
         $('.bubble3').removeClass('color-bubble')
         $('.bubble4').removeClass('color-bubble')
         $('.bubble5').removeClass('color-bubble')
-        $('.onboard-slider').toggleClass('slide6');
-        $('.onboard-slider').removeClass('slide2');
-        $('.onboard-slider').removeClass('slide3');
-        $('.onboard-slider').removeClass('slide4');
-        $('.onboard-slider').removeClass('slide5');
+      });
+      $('.onboard-c6').click(function(){
+        $('.onboard-c1').toggleClass('rotate');
+        $('.onboard-c2').toggleClass('rotate');
+        $('.onboard-c3').toggleClass('rotate');
+        $('.onboard-c4').toggleClass('rotate');
+        $('.onboard-c5').toggleClass('rotate');
+        $('.bubble1').addClass('color-bubble')
+        $('.bubble2').removeClass('color-bubble')
+        $('.bubble3').removeClass('color-bubble')
+        $('.bubble4').removeClass('color-bubble')
+        $('.bubble5').removeClass('color-bubble')
+        $('.bubble6').removeClass('color-bubble')
       });
     });
   </script>

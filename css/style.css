@@ -90,13 +90,13 @@ body, html{
 
 /*...........NAVIGATION BAR..........*/
 .nav-menu2{
-    display: none !important;
+    display: none;
     z-index: 555;
     background-color: #fff;
 }
-.nav-menu2.scrolling{
-    display: flex;
-    position: fixed;
+.scrolling{
+    display: flex !important;
+    position: fixed !important;
     top: 0;
     left: 0;
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 6px 2px 0px rgba(0,0,0,0.19);
@@ -453,75 +453,41 @@ body, html{
 
 .onboarding{
     width: 100vw;
-    height: 100vh;
-    padding-top: 40px;
-    overflow: hidden;
-    background-color: #fff;
-    position: relative;
-}
-.onboarding h1{
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
-    font-family: 'nunito';
-    font-weight: 900;
-    letter-spacing: 3px;
-    color: #616161;
-}
-.onboarding h1::after{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 20%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.514);
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.onboard-slider{
-    width: calc(100vw * 7);
     height: 80vh;
+    padding-top: 40px;
+    overflow: hidden !important;
+    background-color: #fff;
     overflow: hidden;
-    transition: all cubic-bezier(0.03, 0.91, 0.42, 1.35) 0.6s
+    position: relative;
 }
-.onboard-slider.slide2{
-    transform: translateX(-100vw);
-}
-.onboard-slider.slide3{
-    transform: translateX(-200vw);
-}
-.onboard-slider.slide4{
-    transform: translateX(-300vw);
-}
-.onboard-slider.slide5{
-    transform: translateX(-400vw);
-}
-.onboard-slider.slide6{
-    transform: translateX(-500vw);
-}
-.onboard-card-shell{
-    display: inline-block !important;
-    width: 100vw;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(15%);
-}
-.onboard-card{
+.onboard-card2{
     width: 70%;
     height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 6px 12px 0px rgba(0,0,0,0.19);
-    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s;
 }
-.onboard-card img{
+.onboard-card2:hover{
+    cursor: pointer;
+}
+.rotate{
+    transform-origin: top right;
+    transform: rotate(-30deg);
+}
+.onboard-card2 img{
     width: 80%;
+}
+.peek{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -50%);
 }
 .slider-bubble-box{
     width: 20px;
@@ -537,7 +503,7 @@ body, html{
     margin: 10px auto 20px auto;
     border-radius: 50%;
     background-color: rgba(128, 128, 128, 0.589);
-    transition: all cubic-bezier(0.03, 0.91, 0.42, 1.35) 0.4s;
+    transition: all cubic-bezier(0, 0.57, 0.76, 1.13) 0.7s;
 }
 .bubbles:hover{
     cursor: pointer;
@@ -588,7 +554,57 @@ body, html{
 
 
 
+/*.....................................*/
 
+.checkout-services{
+    width: 100vw;
+    padding: 50px;
+}
+.checkout-services h4{
+    margin-left: 40px;
+    font-weight: 700;
+}
+.checkout-box{
+    width: 100%;
+    padding-top: 20px;
+}
+.checkout-row{
+    width: 100%;
+}
+.checkout-row .col-md-3{
+    padding: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+.checkout-row i{
+    display: block;
+    margin-bottom: 20px;
+    color: rgba(24, 24, 24, 0.63);
+    transition: all ease-in-out 0.4s;
+}
+.checkout-row p{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.checkout-row a{
+    text-decoration: none !important;
+}
+
+.checkout-row .ico1{ font-size: 80px; transform: rotate(-10deg); }
+.checkout-row .ico2{ font-size: 50px; transform: rotate(10deg); }
+.checkout-row .ico3{ font-size: 40px; transform: rotate(20deg); }
+.checkout-row .ico4{ font-size: 50px; transform: rotate(-10deg); }
+.checkout-row .ico5{ font-size: 50px; transform: rotate(-30deg); }
+.checkout-row .ico6{ font-size: 60px; transform: rotate(20deg); }
+.checkout-row .ico7{ font-size: 80px; transform: rotate(-30deg); }
+.checkout-row .ico8{ font-size: 60px; transform: rotate(10deg); }
+
+.checkout-row i:hover{
+    color: rgb(255, 153, 0);
+    transform: rotate(0deg);
+}
+/*.....................................*/
 
 
 
